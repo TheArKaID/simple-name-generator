@@ -2,7 +2,7 @@
 
 namespace TheArKaID;
 
-class RandomNameGenerator
+class SimpleNameGenerator
 {
     private $vowels;
     private $consonants;
