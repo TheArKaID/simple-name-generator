@@ -1,4 +1,7 @@
 <?php
+
+namespace TheArKaID;
+
 class RandomNameGenerator
 {
     private $vowels;
