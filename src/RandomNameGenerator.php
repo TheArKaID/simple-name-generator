@@ -46,4 +46,14 @@ class RandomNameGenerator
         }
         return $pattern;
     }
+
+    public function generateGivenName(int $length = 3): string
+    {
+        return $this->generateRandomString($length);
+    }
+
+    public function generateSurname(int $length = 3): string
+    {
+        return $this->generateRandomString($length);
+    }
 }
