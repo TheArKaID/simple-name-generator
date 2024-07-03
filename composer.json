@@ -1,0 +1,21 @@
+{
+    "name": "thearkaid/simple-name-generator",
+    "description": "Generate a random name that truely random",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Thearkaid\\SimpleNameGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TheArKaID",
+            "email": "arka.progammer@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
