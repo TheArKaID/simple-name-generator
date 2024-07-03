@@ -56,4 +56,11 @@ class RandomNameGenerator
     {
         return $this->generateRandomString($length);
     }
+
+    public function generateFullName(int $givenNameLength = 3, int $surnameLength = 3): string
+    {
+        $givenName = $this->generateGivenName($givenNameLength);
+        $surname = $this->generateSurname($surnameLength);
+        return $givenName . ' ' . $surname;
+    }
 }
