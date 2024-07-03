@@ -16,7 +16,7 @@ class RandomNameGenerator
             $length = 3;
         }
 
-        $pattern = 'CVCVC';
+        $pattern = $this->getPattern($length);
         $randomString = '';
 
         foreach (str_split($pattern) as $char) {
@@ -28,5 +28,22 @@ class RandomNameGenerator
         }
 
         return ucfirst($randomString);
+    }
+
+    private function getPattern(int $length): string
+    {
+        $pattern = '';
+        if ($length === 3) {
+            $pattern = 'CVC';
+        } else {
+            $basePattern = 'CVC';
+            $repeatCount = intdiv($length - 3, 2);
+            $extra = ($length - 3) % 2;
+            $pattern = $basePattern . str_repeat('VC', $repeatCount);
+            if ($extra) {
+                $pattern .= 'V';
+            }
+        }
+        return $pattern;
     }
 }
